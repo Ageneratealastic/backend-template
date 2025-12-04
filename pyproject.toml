@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "myapp"
+version = "0.1.0"
+description = "A 12-Factor compliant backend template"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Your Org", email = "dev@example.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.22.0",
+    "sqlalchemy>=2.0",
+    "alembic>=1.12",
+    "python-dotenv>=1.0",
+    "pydantic[email]>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx",
+    "black",
+    "ruff",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/your-backend-template"
+Repository = "https://github.com/your-org/your-backend-template"
